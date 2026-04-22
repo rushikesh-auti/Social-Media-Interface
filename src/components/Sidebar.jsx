@@ -16,7 +16,7 @@ const Sidebar = () => {
         >
           <use xlinkHref="#bootstrap"></use>
         </svg>
-        <span className="fs-4">Sidebar</span>
+        <span className="fs-4">Social Media</span>
       </a>
 
       <hr />
