@@ -14,14 +14,13 @@ const postListReducer = (currPostList, action) => {
   else if (action.type === 'ADD_POST') {
     newPostList = [action.payload, ...currPostList];
   }
-
   return newPostList;
 }
 
 const PostListProvider = ({ children }) => {
   const [postsList, dispatchPostList] = useReducer(postListReducer, DEFAILT_POST_LIST);
 
-  const addPost = (userId, title, body, reactions, tags) => {
+    const addPost = (userId, title, body, reactions, tags) => {
     dispatchPostList({
       type: 'ADD_POST',
       payload: {
@@ -56,7 +55,7 @@ const DEFAILT_POST_LIST = [
     body: 'Hey Friends I Am Going To Pune For A Trip. I Am So Excited.',
     reaction: '5',
     userId: 'user-1',
-    tags: ['veacation', 'pune', 'trip ']
+    tags: ['#veacation', '#pune', '#trip']
   },
   {
     id: '2',
@@ -64,7 +63,7 @@ const DEFAILT_POST_LIST = [
     body: 'Hey Friends I Am Going To Mumbai For A Trip. I Am So Excited.',
     reaction: '4',
     userId: 'user-2',
-    tags: ['veacation', 'mumbai', 'trip ']
+    tags: ['#veacation', '#mumbai', '#trip']
   }
 ];
 
